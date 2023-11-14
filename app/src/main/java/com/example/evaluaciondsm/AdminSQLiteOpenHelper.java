@@ -3,18 +3,25 @@ package com.example.evaluaciondsm;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
 public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
+
+
     public AdminSQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-//        Aqui deben crear la tabla
+        sqLiteDatabase.execSQL(
+
+                "create table products(code int primary key, price real, description text)"
+        );
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {

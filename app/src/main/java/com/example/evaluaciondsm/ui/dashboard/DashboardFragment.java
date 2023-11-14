@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.evaluaciondsm.R;
 import com.example.evaluaciondsm.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment {
@@ -21,6 +22,7 @@ public class DashboardFragment extends Fragment {
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
 
         return root;
     }
